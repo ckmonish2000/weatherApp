@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h5 style="text-align:center;margin-top:50px">Select The City </h5>
-<div class="form-group block" >
+
+<div class="form-group block"  style="display: flex;
+      flex-wrap: wrap;">
   <form action="/result" method="post">
+  <span><h5 style="text-align:center;margin-top:50px;margin-left:17%;">Select The City </h5></span>
   <select name="city" class="form-control" id="sel1" style="width:450px; margin-left:10%; ">
   {% for x  in object %}
     <option  value={{x}}>{{x}}</option>
